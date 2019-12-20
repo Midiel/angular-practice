@@ -4,7 +4,7 @@
 		<div class="col col-sm-8">
 			<ul class="posts">
 				<li *ngFor="let post of posts">
-					<a routerLink="/posts/{{post.id}}">
+					<a routerLink="/detail/{{post.id}}">
 						<h5>Post ID: {{ post.id }}</h5>
 					</a>
 					<h5>Title: {{post.title}}</h5>

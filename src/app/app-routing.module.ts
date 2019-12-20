@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { JsonPlaceholderComponent } from './json-placeholder/json-placeholder.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PostsComponent } from './posts/posts.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'json-placeholder', component: JsonPlaceholderComponent },
   { path: 'posts', component: PostsComponent },
+  { path: 'detail/:id', component: PostDetailComponent},
 ];
 
 @NgModule({

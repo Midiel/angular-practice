@@ -78,4 +78,13 @@ export class PostService {
   }
 
 
+   /** PUT: update the post on the server */
+   updatePost(post: Post): Observable<any> {
+    return this.http.put(this.postsUrl, post, this.httpOptions).pipe(
+      tap(_ => this.log(`updated hero id=${post.id}`)),
+      catchError(this.handleError<any>('updatePost'))
+    );
+  }
+
+
 }

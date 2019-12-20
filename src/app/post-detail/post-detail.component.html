@@ -1,0 +1,18 @@
+<button class="m-3" (click)="goBack()">
+	Go Back
+</button>
+
+<div class="container m-3">
+	<div *ngIf="post">
+		<h5>Post ID: {{ post.id }}</h5>
+		
+		<h5>Title: {{post.title}}</h5>
+		<h5>Boddy:</h5>{{ post.boddy }}
+		<div>
+			<label>Title:
+				<input [(ngModel)]="post.title" placeholder="title"/>
+			</label>
+		</div>
+		<button (click)="save()">Save</button>
+	</div>
+</div>
