@@ -1,1 +1,22 @@
-<p>json-placeholder works!</p>
+<button class="m-3" (click)="goBack()">
+	Go Back
+</button>
+
+<div class="container m-3">
+	<div class="row">
+		<div class="col col-sm-8 m-3">
+			<h5>Get all posts: 
+				<button class="btn btn-primary" (click)="getPosts()">Get</button>
+			</h5>
+		</div>
+	</div>
+</div>
+
+<div *ngIf="posts" class="container m-3">
+	<div *ngFor="let post of posts" class="row">
+		<div class="col col-sm-8 m-3">
+			<h5><span>id: </span>{{post.id}}</h5>
+			<h5><span>title: </span>{{post.title}}</h5>
+		</div>
+	</div>
+</div>

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+
+import { Post } from '../post';
+import { JsonPlaceholderService } from '../json-placeholder.service';
 
 @Component({
   selector: 'app-json-placeholder',
@@ -7,9 +11,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JsonPlaceholderComponent implements OnInit {
 
-  constructor() { }
+  posts: Post[];
+
+  constructor(
+    private jsonPlaceholderService: JsonPlaceholderService,
+    private location: Location,
+    ) { }
 
   ngOnInit() {
   }
 
+  goBack(): void {
+    this.location.back();
+  }
+
+  getPosts(): void {
+    this.jsonPlaceholderService.getPosts()
+      .subscribe(posts => this.posts = posts);
+  }
 }
