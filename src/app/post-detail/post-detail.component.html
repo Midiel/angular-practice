@@ -7,9 +7,9 @@
 		<h5>Post ID: {{ post.id }}</h5>
 		
 		<h5>Title: {{post.title}}</h5>
-		<h5>Boddy:</h5>{{ post.boddy }}
+		<h5>Boddy:</h5><p>{{ post.boddy }}</p>
 		<div>
-			<label>Title:
+			<label>Change the title:
 				<input [(ngModel)]="post.title" placeholder="title"/>
 			</label>
 		</div>
